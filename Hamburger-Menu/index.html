@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Index</title>
+</head>
+<body>
+    
+   <nav>
+      <!-- Show Menu-->
+       <p class="bar hide-show-bar">Menu</p>
+
+       <!-- Close Menu -->
+    <p class="hide-close-bar close-bar">Close</p>
+
+      
+ 
+       <!-- Nav List -->
+       <ul class="hide-ul show-ul">
+
+          <a class="a" href="#about"><li>About</li></a>
+          <a class="a" href="#contact"><li>Contact</li></a>
+         
+       </ul>
+
+   </nav> 
+
+
+   <section>
+      <div id="about" class="about">
+           <h1>About Section</h1>
+      </div>
+      <div id="contact" class="contact">
+       
+        <h1>Contact Section</h1>
+
+      </div>
+   </section>
+
+
+
+   <script>
+ 
+   // Get the Show menu 
+   const showbar = document.getElementsByClassName('bar')[0]
+    
+     showbar.addEventListener('click',()=>{{
+     
+        // Get Ul container to display the menu
+        const showul = document.getElementsByClassName('show-ul')[0]
+        showul.classList.remove('hide-ul')
+       
+
+        // Hide the Show bar after displayed the menu then show the close bar
+        showbar.classList.add('show-bar')
+
+        // Get the Close button 
+        const hidebar = document.getElementsByClassName('close-bar')[0]
+
+        // Hide the menu bar with the close button
+
+        hidebar.classList.add('show-close-bar')
+       
+     }})
+
+
+     // Get Close button
+     const closebar = document.getElementsByClassName('close-bar')[0]
+     closebar.addEventListener('click',() =>{
+          
+         // Get Ul container to hide the menu
+         const showul = document.getElementsByClassName('show-ul')[0]
+         showul.classList.add('hide-ul')
+
+         // Display the Show bar after displayed the menu then show the close bar
+         showbar.classList.remove('show-bar')
+
+          // Get the Close button 
+          const hidebar = document.getElementsByClassName('close-bar')[0]
+
+            // Hide the close button bar
+
+            hidebar.classList.remove('show-close-bar')
+
+        })
+
+
+        // Get the a tag
+
+        const about = document.getElementsByClassName('a')[0]
+
+        about.addEventListener('click',()=>{
+          
+          // Get Ul container to hide the menu
+          const showul = document.getElementsByClassName('show-ul')[0]
+         showul.classList.add('hide-ul')
+
+         // Display the Show bar after displayed the menu then show the close bar
+         showbar.classList.remove('show-bar')
+
+          // Get the Close button 
+          const hidebar = document.getElementsByClassName('close-bar')[0]
+
+            // Hide the close button bar
+
+            hidebar.classList.remove('show-close-bar')
+       
+
+        })
+
+
+        const contact = document.getElementsByClassName('a')[1]
+
+        contact.addEventListener('click',()=>{
+  
+  // Get Ul container to hide the menu
+  const showul = document.getElementsByClassName('show-ul')[0]
+ showul.classList.add('hide-ul')
+
+ // Display the Show bar after displayed the menu then show the close bar
+ showbar.classList.remove('show-bar')
+
+  // Get the Close button 
+  const hidebar = document.getElementsByClassName('close-bar')[0]
+
+    // Hide the close button bar
+
+    hidebar.classList.remove('show-close-bar')
+
+
+})
+     
+
+   </script>
+
+
+</body>
+</html>
